@@ -1,0 +1,21 @@
+<h2>Try Final</h2>
+
+<button type="button" (click)="add()">
+  <i class="material-symbols-outlined">add</i>
+  Add
+</button>
+<div class="cmp-input-list">
+  <ng-container *ngFor="let item of items; let i = index">
+    <input
+      #input
+      type="number"
+      [value]="item.value"
+      (change)="onChange(i, input.valueAsNumber)"
+    />
+    <button type="button" (click)="delete(i)" [disabled]="items.length <= 1">
+      <i class="material-symbols-outlined">delete_forever</i>
+    </button>
+  </ng-container>
+</div>
+
+<output>{{ getResult() }}</output>
