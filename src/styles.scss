@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
 :root {
+  --color-primary: rgba(0, 0, 255, 1);
+  --color-warning: rgba(255, 0, 0, 1);
+
   --font-default: 'Roboto Flex', sans-serif;
   --font-mono: 'Roboto Mono', monospace;
   --font-setting-default: 'wdth' 150;
@@ -20,6 +23,14 @@ button {
   flex-direction: row;
   align-items: center;
   font-family: var(--font-default);
+}
+
+.cl-primary:not(:disabled) {
+  color: var(--color-primary);
+}
+
+.cl-warning:not(:disabled) {
+  color: var(--color-warning);
 }
 
 .cl-number,

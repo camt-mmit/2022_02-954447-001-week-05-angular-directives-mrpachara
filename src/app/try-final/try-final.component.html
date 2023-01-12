@@ -1,6 +1,6 @@
 <h2>Try Final</h2>
 
-<button type="button" (click)="add()">
+<button type="button" (click)="add()" class="cl-primary">
   <i class="material-symbols-outlined">add</i>
   Add
 </button>
@@ -12,7 +12,12 @@
       [value]="item.value"
       (change)="onChange(i, input.valueAsNumber)"
     />
-    <button type="button" (click)="delete(i)" [disabled]="items.length <= 1">
+    <button
+      type="button"
+      (click)="delete(i)"
+      [disabled]="items.length <= 1"
+      class="cl-warning"
+    >
       <i class="material-symbols-outlined">delete_forever</i>
     </button>
   </ng-container>
